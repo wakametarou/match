@@ -14,7 +14,7 @@ const appChatRoom = consumer.subscriptions.create("ChatRoomChannel", {
     chatMessages.insertAdjacentHTML('beforeend', data['chat_message']);
   },
 
-  speak: function(chat_message) {
+  speak: function(chat_message, chat_room_id) {
     return this.perform('speak', { chat_message: chat_message,chat_room_id: chat_room_id });
   }
 });
